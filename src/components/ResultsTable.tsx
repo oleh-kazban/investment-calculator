@@ -1,5 +1,5 @@
-import { calculateInvestmentResults, formatter, InvestmentInputs } from '../util/investment';
 import ResultsTableRow from './ResultsTableRow';
+import { calculateInvestmentResults, formatter, InvestmentInputs } from '../util/investment';
 
 type ResultsTableProps = {
   investments: InvestmentInputs,

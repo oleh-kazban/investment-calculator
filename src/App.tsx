@@ -5,9 +5,9 @@ import UserInput from "./components/UserInput";
 import { type InvestmentInputs as InvestmentState } from "./util/investment";
 
 const initialState: InvestmentState = {
-  initialInvestment: 1000,
-  annualInvestment: 100,
-  expectedReturn: 0,
+  initialInvestment: 10000,
+  annualInvestment: 1200,
+  expectedReturn: 6,
   duration: 1,
 };
 
@@ -22,13 +22,13 @@ function App() {
       [inputIdentifier]: newValue,
     }));
   };
-  const isValid = !!state.duration;
+  const isValid = state.duration >= 1;
 
   return (
     <>
       <UserInput investmentState={state} onFormChange={handleFormChange} />
       { isValid && <ResultsTable investments={state}/>}
-      { !isValid && <p className="center">The duration can't be negative or 0</p>}
+      { !isValid && <p className="center">The duration should be at leat 1 year!</p>}
       
     </>
   );

@@ -1,3 +1,4 @@
+
 const UserInput = () => (
   <div id="user-input" className="user-input">
     <div className="input-group">
